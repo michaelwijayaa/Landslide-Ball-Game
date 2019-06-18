@@ -1,3 +1,8 @@
+/***
+* LAND SLIDE BALL GAME
+* 
+***/
+
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
 
@@ -25,7 +30,9 @@ int sensor3 = 0;
 int sensor4 = 0;
 int sensor5 = 0;
 int sensor6 = 0;
-int threshold = 400; //threshold di sensor IR
+
+//Threshold Value of IR Sensor (Depends on your own sensor)
+int threshold = 400; 
 void setup() {
 Serial.begin(9600);
 lcd.init();
@@ -34,7 +41,7 @@ lcd.backlight(); //menyalakan lcd backlight
 lcd.clear();
 lcd.home();
 
-  //7segment / LED matrix pin disini
+//7segment / LED Pins Declaration
 pinMode(12,OUTPUT);
 pinMode(13,OUTPUT);
 pinMode(14,OUTPUT);
@@ -83,8 +90,6 @@ void loop() {
   delay(5000);
  game_start();
   //IDLE STATE , menyalakan hiasan lampu
-
-  
  }
 
 }
